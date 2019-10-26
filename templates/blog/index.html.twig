@@ -1,46 +1,21 @@
 {% extends'base.html.twig' %}
 
-{% block title %}Welcome! {% endblock %}
+{% block title %}Liste des articles{% endblock %}
 
 {% block body %}
 
     <section class="articles">
-        <article>
-            <h2>Titre de l'article</h2>
-            <div class="metadata">Ecrit le 10/05/2018 à 19:00 dans la catégorie Politique</div>
-            <div class="content"><img src="https://placehold.it/350x150" alt="">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum incidunt ipsum laboriosam molestias
-                    quia sed!</p>
-                <p>Aliquam, dolor dolorem error expedita ipsa modi mollitia odio quas quidem reprehenderit sed suscipit
-                    voluptates?</p>
-                <a href="{{ path('blog_show') }}" class="btn btn-primary">Lire la suite</a>
-            </div>
-        </article>
-        <hr>
-        <article>
-            <h2>Titre de l'article</h2>
-            <div class="metadata">Ecrit le 10/05/2018 à 19:00 dans la catégorie Politique</div>
-            <div class="content"><img src="https://placehold.it/350x150" alt="">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At dolorem, quas? Accusantium impedit
-                    inventore voluptatibus.</p>
-                <p>Ad dolore eaque earum, esse excepturi facere harum illo magni molestias officiis ratione reiciendis
-                    vitae!</p>
-                <a href="{{ path('blog_show') }}" class="btn btn-primary">Lire la suite</a>
-            </div>
-        </article>
-        <hr>
-        <article>
-            <h2>Titre de l'article</h2>
-            <div class="metadata">Ecrit le 10/05/2018 à 19:00 dans la catégorie Politique</div>
-            <div class="content"><img src="https://placehold.it/350x150" alt="">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium cumque enim incidunt
-                    praesentium ullam!</p>
-                <p>Autem beatae et ex quisquam sequi. Accusamus accusantium aperiam cumque illo magnam quae, qui
-                    ratione.</p>
-                <a href="{{ path('blog_show') }}" class="btn btn-primary">Lire la suite</a>
-            </div>
-        </article>
-        <hr>
+        {% for article in articles %}
+            <article>
+                <h2>{{ article.title }}</h2>
+                <div class="metadata">Ecrit le {{ article.createdAt | date('d/m/Y') }} à {{ article.createdAt | date('H:i')}} dans la catégorie Politique</div>
+                <div class="content"><img src="{{ article.image }}" alt="">
+                    {{ article.content | raw }}
+                    <a href="{{ path('blog_show', {'id': article.id}) }}" class="btn btn-primary">Lire la suite</a>
+                </div>
+            </article>
+            <hr>
+        {% endfor %}
     </section>
 
 
