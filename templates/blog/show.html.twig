@@ -1,1 +1,24 @@
-<h1>Affichage de l'article {{ slug }}</h1>
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <article>
+        <h2>Titre de l'article</h2>
+        <div class="metadata">Ecrit le 10/05/2018 à 19:00 dans la catégorie Politique</div>
+        <div class="content"><img src="https://placehold.it/350x150" alt="">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum incidunt ipsum laboriosam molestias
+                quia sed!</p>
+            <p>Aliquam, dolor dolorem error expedita ipsa modi mollitia odio quas quidem reprehenderit sed suscipit
+                voluptates?</p>
+            <hr>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam asperiores aspernatur dicta est fugiat
+                molestiae molestias neque, odio officiis quaerat, quas repellat, saepe sed ullam veritatis voluptas
+                voluptatum. Fuga hic, neque. Delectus doloribus error id ipsam laudantium numquam perspiciatis
+                recusandae reprehenderit veniam voluptatum. Ea, excepturi reiciendis! Assumenda dicta impedit
+                libero?</p>
+            <p>At, delectus dolorem dolores ea eius facere illo incidunt iusto laborum maxime omnis, pariatur? Eaque
+                esse eveniet quam quod veritatis. Ab doloribus iusto, ratione reiciendis repellendus vel voluptatum.
+                Accusantium, amet dolor doloribus eligendi facilis, hic illo ipsa laboriosam laudantium libero magni
+                modi officia porro quidem quo rerum ut. Odio, recusandae?</p>
+        </div>
+    </article>
+{% endblock %}

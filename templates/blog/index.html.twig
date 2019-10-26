@@ -1,17 +1,47 @@
 {% extends'base.html.twig' %}
+
+{% block title %}Welcome! {% endblock %}
+
 {% block body %}
-<h1>Hello World!</h1>
-<h2>Bienvenue sur mon blog!</h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, adipisci alias blanditiis, doloribus minima
-    nostrum, odio officiis reiciendis rerum suscipit totam unde vitae? Accusamus assumenda enim iusto laudantium quaerat
-    quidem sunt vel voluptatum. Dolorem earum inventore nihil sapiente. Ducimus, numquam.</p>
-<p>Accusantium aperiam aut blanditiis eius enim eos incidunt, itaque, magnam optio ratione temporibus ullam vel veniam!
-    Assumenda cupiditate, enim eos facere fuga fugit illo itaque magnam nisi omnis optio quam, qui quidem repudiandae,
-    sint soluta velit. Dignissimos exercitationem laboriosam similique.</p>
-<p>Alias animi asperiores autem consequuntur debitis dolor dolore dolorem excepturi, explicabo ipsam itaque laboriosam,
-    laudantium maxime nam nesciunt obcaecati, officiis praesentium quas reiciendis reprehenderit saepe sequi velit
-    voluptatem. Animi et explicabo ipsa ipsum mollitia natus nisi possimus qui reiciendis. Neque.</p>
-<p>Doloremque, eveniet illo, illum in laboriosam laborum magnam magni nam nulla, obcaecati quae temporibus vel
-    voluptate. Assumenda aut cupiditate ea, eius illum minima optio recusandae totam veritatis voluptas. Ab dolore earum
-    eum expedita, labore nam nisi nobis quas quisquam unde!</p>
+
+    <section class="articles">
+        <article>
+            <h2>Titre de l'article</h2>
+            <div class="metadata">Ecrit le 10/05/2018 à 19:00 dans la catégorie Politique</div>
+            <div class="content"><img src="https://placehold.it/350x150" alt="">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum incidunt ipsum laboriosam molestias
+                    quia sed!</p>
+                <p>Aliquam, dolor dolorem error expedita ipsa modi mollitia odio quas quidem reprehenderit sed suscipit
+                    voluptates?</p>
+                <a href="{{ path('blog_show') }}" class="btn btn-primary">Lire la suite</a>
+            </div>
+        </article>
+        <hr>
+        <article>
+            <h2>Titre de l'article</h2>
+            <div class="metadata">Ecrit le 10/05/2018 à 19:00 dans la catégorie Politique</div>
+            <div class="content"><img src="https://placehold.it/350x150" alt="">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At dolorem, quas? Accusantium impedit
+                    inventore voluptatibus.</p>
+                <p>Ad dolore eaque earum, esse excepturi facere harum illo magni molestias officiis ratione reiciendis
+                    vitae!</p>
+                <a href="{{ path('blog_show') }}" class="btn btn-primary">Lire la suite</a>
+            </div>
+        </article>
+        <hr>
+        <article>
+            <h2>Titre de l'article</h2>
+            <div class="metadata">Ecrit le 10/05/2018 à 19:00 dans la catégorie Politique</div>
+            <div class="content"><img src="https://placehold.it/350x150" alt="">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium cumque enim incidunt
+                    praesentium ullam!</p>
+                <p>Autem beatae et ex quisquam sequi. Accusamus accusantium aperiam cumque illo magnam quae, qui
+                    ratione.</p>
+                <a href="{{ path('blog_show') }}" class="btn btn-primary">Lire la suite</a>
+            </div>
+        </article>
+        <hr>
+    </section>
+
+
 {% endblock %}
