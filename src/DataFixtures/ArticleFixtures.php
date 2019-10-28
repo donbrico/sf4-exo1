@@ -33,7 +33,7 @@ class ArticleFixtures extends Fixture
             $manager->persist($category);
 
             //Créer entre 4 et 6 articles
-            for($j = 1; $j <= 10;$j++){
+            for($j = 1, $jMax = mt_rand(4, 6); $j <= $jMax; $j++){
                 $article = new Article();
 
                 $content = '<p>' . implode($faker->paragraphs(5), '</p><p>') . '</p>';
